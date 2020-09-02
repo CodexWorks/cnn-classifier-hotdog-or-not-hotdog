@@ -61,7 +61,7 @@ def load_images(image_paths, class_label, image_size):
         y.append(class_label)
 
     # Data augmentation
-    while len(x) < 25000:
+    while len(x) < 20000:
         print("image augmentation - random image path (hotdog)")
         randIdx = np.random.randint(0, len(image_paths))
         image = modify_image(image_paths[randIdx], image_size)
@@ -93,6 +93,7 @@ def post_process_data(images):
 
     # Reshape array to a specific input shape
     grayImages = grayImages.reshape(grayImages.shape + (1,))
+    print(grayImages[0].shape)
     return grayImages
 
 

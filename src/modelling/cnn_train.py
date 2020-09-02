@@ -25,7 +25,7 @@ for food_category in os.listdir(dataset_path_images):
         # not-Hotdog - class 1
         k = 0
         for not_hotdog_img in os.listdir(dataset_path_images + food_category):
-            if k >= 750:
+            if k >= 200:
                 break
             not_hotdogs.append(dataset_path_images + food_category + "/" + not_hotdog_img)
             k = k + 1
@@ -67,7 +67,7 @@ np.random.seed(rand_state)
 
 # Split X_images into X_train and X_test and Y_labes into Y_train and Y_test
 X_train, X_test, Y_train, Y_test = train_test_split(X_images, Y_labels,
-                                                    test_size=0.15,
+                                                    test_size=0.10,
                                                     random_state=rand_state)
 
 # print(X_train[1])
@@ -86,7 +86,7 @@ input_shape = (image_size, image_size, 1)
 #                                                 horizontal_flip=True,
 #                                                 fill_mode="nearest")
 
-cnnRecognition = MainCNNRecognition("cnn_hotdog_v15_25_75", input_shape)
+cnnRecognition = MainCNNRecognition("cnn_hotdog_v18_50_50_2806", input_shape)
 print(cnnRecognition)
 
 cnnRecognition.train(X_train, Y_train, X_test, Y_test)

@@ -1,0 +1,13 @@
+body {
+    margin: 8px;
+}
+
+.cont > * {
+    margin: 15px 0; 
+}
+
+img{
+    width: 400px;
+    height: 300px;
+    float: left;
+}

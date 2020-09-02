@@ -60,7 +60,7 @@ class MainCNNRecognition(CNNInterface):
         self.__history = self.__model.fit(
             X_train, Y_train,
             batch_size=32,
-            epochs=50,
+            epochs=100,
             validation_data=(X_test, Y_test))
 
         print("Training completed")
