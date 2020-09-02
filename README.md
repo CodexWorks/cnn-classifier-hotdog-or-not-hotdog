@@ -2,7 +2,7 @@
 
 ### Introduction
 
-This project is the basis of the article entitled "Hotdog / Hotdog image classification with CNN, using Keras model",
+This project is the basis of the article entitled *"Hotdog / Hotdog image classification with CNN, using Keras model"*,
 which can be read in full in the blog section of the Codexworks team: www.codexworks.com.
 
 ### Overview
